@@ -59,7 +59,7 @@
             background-color: white;
             box-shadow: 0 0 3px #ccc;
             padding: 2em;
-            gap: 1em;
+            gap: .6em;
             border-radius: 10px;
         }
 
@@ -71,11 +71,15 @@
 
         label {
             font-family: 'Crimson Pro', serif;
+            font-size: 1em;
         }
 
         .input-field {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            width: 100%;
         }
 
         input:focus,
@@ -91,10 +95,9 @@
 
         input,
         button,
-        textarea,
-        label {
-            font-size: 1em;
-            height: 1.3em;
+        textarea {
+            font-size: 1.2em;
+            height: 2em;
         }
 
         textarea {
