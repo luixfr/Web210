@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,200&family=Hammersmith+One&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operable Form</title>
+</head>
+
+<body>
+    <form>
+        <h1>Register</h1>
+        <div class="input-field">
+            <label for="input-name">First Name</label>
+            <input id="input-name" type="text">
+        </div>
+        <div class="input-field">
+
+            <label for="input-lastName">Last Name</label>
+            <input id="input-lastName" type="text">
+        </div>
+        <div class="input-field">
+
+            <label for="input-email">Email</label>
+            <input id="input-email" type="email">
+        </div>
+        <div class="input-field">
+            <label for="input-phone">Phone Number</label>
+            <input id="input-phone" type="phone">
+        </div>
+        <div class="input-field">
+            <label for="input-description">Description</label>
+            <textarea id="input-description" cols="50" rows="10"></textarea>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(210, 217, 223);
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            box-shadow: 0 0 3px #ccc;
+            padding: 2em;
+            gap: 1em;
+            border-radius: 10px;
+        }
+
+        h1,
+        input,
+        button {
+            font-family: 'Hammersmith One', sans-serif;
+        }
+
+        label {
+            font-family: 'Crimson Pro', serif;
+        }
+
+        .input-field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input:focus,
+        button:focus,
+        textarea:focus {
+            box-shadow: 0 0 3px black;
+        }
+
+        input:focus+label,
+        input:active+label {
+            color: blue;
+        }
+
+        input,
+        button,
+        textarea,
+        label {
+            font-size: 1em;
+            height: 1.3em;
+        }
+
+        textarea {
+            padding: 1em;
+            height: inherit;
+        }
+
+
+        button {
+            width: 50%;
+            height: 2em;
+            margin: auto;
+            background-color: #0e5d9e;
+            color: white;
+            font-weight: bold;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+
+</body>
+
+</html>
