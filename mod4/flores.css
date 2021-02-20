@@ -18,7 +18,6 @@ body {
   background-color: var(--bgcolor);
   display: flex;
   flex-direction: column;
-  gap: 4em;
 }
 .title {
   font-family: var(--title-font);
@@ -94,6 +93,11 @@ section,
   border: 1px solid var(--bordercolor);
   box-shadow: 0 0 5px var(--bordercolor);
 }
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+}
 #about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -114,16 +118,11 @@ section,
   gap: 4em;
   background-color: white;
 }
-#recent-posts {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr;
+.post-cards {
+  display: flex;
+  justify-content: space-between;
   gap: 1em;
-  grid-template-areas:
-    "title title title"
-    "card1 card2 card3";
 }
-
 #recent-posts .title {
   grid-area: title;
   text-align: center;
@@ -168,6 +167,7 @@ section,
   display: grid;
   text-align: center;
   align-content: center;
+  margin-top: 2em;
 }
 #packages {
   display: grid;
@@ -184,5 +184,6 @@ table td {
   height: 2em;
 }
 table tr:first-child td:first-child {
+  box-shadow: none;
   background: transparent;
 }
