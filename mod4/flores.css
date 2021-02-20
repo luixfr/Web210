@@ -24,7 +24,8 @@ body {
   font-weight: 100;
   font-size: 3em;
 }
-p {
+p,
+.text {
   font-family: var(--text-font);
 }
 #header {
@@ -78,7 +79,8 @@ p {
   text-decoration: none;
   color: black;
 }
-section {
+section,
+#footer {
   width: 80%;
   margin: auto;
   padding: 2em;
@@ -152,9 +154,25 @@ section {
 }
 #footer {
   width: 100%;
-  background-color: var(--boxcolor);
   height: 5em;
   display: grid;
   text-align: center;
   align-content: center;
+}
+#packages {
+  display: grid;
+  align-content: center;
+  text-align: center;
+}
+
+table th {
+  background-color: var(--bgcolor);
+}
+table td {
+  background-color: white;
+  box-shadow: 1px 1px 3px #ccc;
+  height: 2em;
+}
+table tr:first-child td:first-child {
+  background: transparent;
 }
