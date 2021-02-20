@@ -2,6 +2,7 @@
   --boxcolor: #f1f8f9;
   --bgcolor: #d5dddf;
   --bordercolor: #c9cfcf;
+  --title-color: #ffad01;
   --title-font: "Lateef", cursive;
   --text-font: "Open Sans", sans-serif;
 }
@@ -21,12 +22,16 @@ body {
 }
 .title {
   font-family: var(--title-font);
-  font-weight: 100;
-  font-size: 3em;
+  font-weight: bold;
+  font-size: 3.5em;
+  color: var(--title-color);
 }
 p,
 .text {
   font-family: var(--text-font);
+}
+#navigation-hidden-tag {
+  display: none;
 }
 #header {
   width: 100%;
@@ -107,6 +112,7 @@ section,
   align-items: center;
   padding: 1em;
   gap: 4em;
+  background-color: white;
 }
 #recent-posts {
   display: grid;
@@ -125,18 +131,22 @@ section,
 .post-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
+  height: 30em;
   background-color: white;
   box-shadow: 0 0 3px #ccc;
 }
 .post-card img {
+  flex: 3;
   width: 100%;
   height: 100%;
   -webkit-object-fit: cover;
   object-fit: cover;
 }
 .post-card .post-description {
-  flex: 2;
+  flex: 1;
+  height: 100%;
   padding: 2em;
   display: flex;
   text-align: center;
