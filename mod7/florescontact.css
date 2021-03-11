@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(210, 217, 223);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 0 3px #ccc;
+  padding: 2em;
+  gap: 0.6em;
+  border-radius: 10px;
+}
+
+h1,
+h2,
+button {
+  font-family: "Hammersmith One", sans-serif;
+  font-weight: 100;
+}
+
+label {
+  font-family: "Crimson Pro", serif;
+  font-size: 1.1em;
+}
+.radio-inputs {
+  border: 1px solid #ccc;
+  padding: 1em;
+  gap: 1em;
+}
+#choose-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#choose-field h2 {
+  flex-wrap: nowrap;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + label {
+  color: #0e5d9e;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.input-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+}
+
+input:focus,
+button:focus,
+textarea:focus {
+  box-shadow: 0 0 3px black;
+}
+
+input,
+button,
+textarea {
+  font-size: 1rem;
+  height: 2em;
+}
+
+textarea {
+  padding: 1em;
+  height: inherit;
+}
+
+#buttons {
+  display: flex;
+  gap: 2em;
+}
+button {
+  width: 50%;
+  height: 2em;
+  margin: auto;
+  background-color: #0e5d9e;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}

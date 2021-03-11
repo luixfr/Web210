@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,200&family=Hammersmith+One&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="florescontact.css">
+    <title>Flores Contact</title>
+</head>
+
+<body>
+    <form method="POST" action="http://webdevbasics.net/scripts/demo.php">
+        <h1>Contact Form</h1>
+        <div class="input-field">
+            <label for="input-name">First Name</label>
+            <input id="input-name" type="text">
+        </div>
+        <div class="input-field">
+
+            <label for="input-lastName">Last Name</label>
+            <input id="input-lastName" type="text">
+        </div>
+        <div class="input-field">
+
+            <label for="input-email">Email</label>
+            <input id="input-email" type="email">
+        </div>
+        <div class="input-field radio-inputs">
+            <h2>How did you hear about this website?</h2>
+            <div id="choose-field">
+                <input id="input-radio-search-engine" name="heard-by" type="radio">
+                <label for="input-radio-search-engine">Search engine</label>
+                <input id="input-radio-friend" name="heard-by" type="radio">
+                <label for="input-radio-friend">Refered by a fiend</label>
+                <input id="input-radio-twitter" name="heard-by" type="radio">
+                <label for="input-radio-twitter">Twitter</label>
+                <input id="input-radio-other" name="heard-by" type="radio">
+                <label for="input-radio-other">Other</label>
+            </div>
+        </div>
+        <div class="input-field">
+            <label for="input-description">Description</label>
+            <textarea id="input-description" cols="50" rows="10"></textarea>
+        </div>
+        <div id="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
