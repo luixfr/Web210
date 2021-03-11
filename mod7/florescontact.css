@@ -24,6 +24,7 @@ form {
 
 h1,
 h2,
+legend,
 button {
   font-family: "Hammersmith One", sans-serif;
   font-weight: 100;
@@ -44,9 +45,7 @@ label {
   justify-content: space-around;
   align-items: center;
 }
-#choose-field h2 {
-  flex-wrap: nowrap;
-}
+
 input[type="radio"] {
   display: none;
 }
