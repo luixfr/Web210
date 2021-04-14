@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--sans-serif);
+}
+:root {
+  /* colors */
+  --color1: #d9d5a3;
+  --color2: #f2f0d5;
+  --color3: #bfb78f;
+  --color4: #d9d2ad;
+  --color5: #f2efe4;
+
+  /* fonts */
+  --handwritting: "Parisienne", cursive;
+  --serif: "Lora", serif;
+  --sans-serif: "Roboto", sans-serif;
+}
+.title {
+  font-family: var(--handwritting);
+  font-weight: normal;
+  font-size: 2rem;
+}
+.subtitle {
+  font-weight: normal;
+}
+.subtitle.primary {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+}
+.subtitle.secondary {
+  font-family: var(--handwritting);
+  font-size: 2rem;
+}
+body {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "banner banner"
+    "main aside"
+    "section section"
+    "footer footer";
+  gap: 1em;
+}
+
+#banner {
+  grid-area: banner;
+  padding: 1.4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color4);
+}
+#logo {
+  width: 100%;
+}
+#navigation {
+  width: 80%;
+}
+#menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#menu .menu-item a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-size: 1.1rem;
+  font-style: italic;
+  cursor: pointer;
+}
+
+#new-products {
+  grid-area: main;
+  display: flex;
+  background-image: url("lace.jpg");
+  background-size: 20em;
+  margin-left: 4em;
+}
+#new-products div {
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#new-products img {
+  object-fit: cover;
+  width: 50%;
+}
+#new-products .subtitle.primary,
+#new-products .subtitle.subtitle.secondary {
+  font-size: 4rem;
+  text-shadow: 2px -1px 4px black;
+  color: white;
+}
+#new-products .subtitle.subtitle.secondary {
+  font-weight: 600px;
+}
+#new-products p {
+  margin-top: 2em;
+  font-size: 1.1rem;
+  background-color: #ffffff9f;
+  padding: 1em;
+  text-align: justify;
+}
+
+#wedding-planning {
+  background-color: var(--color2);
+  padding: 1em;
+  grid-area: aside;
+  margin-right: 4em;
+}
+#wedding-planning .subtitle {
+  font-size: 3rem;
+  margin-bottom: 1em;
+}
+#wedding-planning form {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  background-color: var(--color2);
+}
+#wedding-planning form input {
+  box-sizing: border-box;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color3);
+  margin-bottom: 1em;
+}
+#wedding-plannig form * {
+  background-color: var(--color3);
+}
+#wedding-planning form button {
+  box-shadow: inset 0px 1px 0px 0px var(--color3);
+  background-color: var(--color3);
+  border: 1px solid var(--color2);
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 14px;
+  padding: 8px 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#appointments {
+  grid-area: section;
+  background-color: var(--color1);
+  text-align: center;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  margin: 0 4em;
+}
+#appointments table {
+  width: 50%;
+  margin: auto;
+}
+#appointments table td {
+  text-align: left;
+}
+#footer {
+  grid-area: footer;
+  width: 100%;
+  margin: auto;
+  height: 10vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color4);
+}
+
+@media only screen and (max-width: 1200px) {
+  #new-products {
+    flex-direction: column-reverse;
+  }
+  #new-products img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  #new-products {
+    flex-direction: row;
+  }
+  #new-products img {
+    width: 40%;
+  }
+  #new-products,
+  #wedding-planning,
+  #appointments {
+    width: 90%;
+    margin: auto;
+  }
+}
